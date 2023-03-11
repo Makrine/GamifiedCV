@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-<<<<<<< Updated upstream
-    <div id="unity-container" style="width:100%; height:100%;">
-=======
     <div id="unity-container" style="width: 100%; height: 100%;">
->>>>>>> Stashed changes
       <canvas id="unity-canvas" width=auto height=auto></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -21,19 +17,11 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
-<<<<<<< Updated upstream
 <!--       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">MakrinaTskipurishviliResumePage</div>
       </div> -->
-=======
-      <!--<div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">MakrinaTskipurishviliResumePage</div>
-      </div>-->
->>>>>>> Stashed changes
     </div>
     <script>
       var container = document.querySelector("#unity-container");
@@ -120,15 +108,10 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-<<<<<<< Updated upstream
-//           fullscreenButton.onclick = () => {
-//             unityInstance.SetFullscreen(1);
-//           };
-=======
+
           //fullscreenButton.onclick = () => {
           //  unityInstance.SetFullscreen(1);
          // };
->>>>>>> Stashed changes
         }).catch((message) => {
           alert(message);
         });
