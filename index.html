@@ -29,11 +29,7 @@
       </div>
       <div id="unity-warning"> </div>
     </div>
-<script>
-    if(UnityLoader.SystemInfo.mobile == true){
-        ScreenOrientation.lock('landscape');
-    }
-</script>
+
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -88,7 +84,13 @@
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
-ScreenOrientation.lock('landscape');
+screen.orientation.lock("landscape")
+	.then(function() {
+		alert('Locked');
+	})
+	.catch(function(error) {
+		alert(error);
+	});
         var meta = document.createElement('meta');
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
